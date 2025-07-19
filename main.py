@@ -509,14 +509,14 @@ def predict_with_fallback(model, df):
             - **Cambios clínicos:** Inmediatamente
             """)
 
-else:
+if model is None:
     st.error("No se pudo cargar el modelo. Verifique que el archivo 'vasopressor_model.pkl' esté disponible.")
     
     st.info("""
     **Para usar esta aplicación:**
     1. Asegúrese de que el archivo `vasopressor_model.pkl` esté en el mismo directorio
     2. Instale las dependencias: `pip install streamlit pandas scikit-learn joblib plotly`
-    3. Ejecute: `streamlit run app.py`
+    3. Ejecute: `streamlit run main.py`
     """)
 
 # Footer
